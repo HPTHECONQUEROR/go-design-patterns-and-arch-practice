@@ -35,7 +35,6 @@ func Worker(jobs chan int, n int, result chan int, errorCh chan SqError, wg *syn
 }
 
 func main() {
-    runtime.GOMAXPROCS(1)
 	var wg sync.WaitGroup
 	nJobs := 100
 	nWorkers := 10
